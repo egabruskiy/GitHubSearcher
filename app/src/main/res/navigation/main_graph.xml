@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/google_sign_in_fragment">
+
+    <fragment
+        tools:layout="@layout/google_sign_in_fragment"
+        android:name="com.egabruskiy.githubsearcher.ui.login.GoogleSignInFragment"
+        android:id="@+id/google_sign_in_fragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/login_fragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.egabruskiy.githubsearcher.ui.mainFragment.MainFragment"
+        android:label="main_fragment">
+        <action
+            android:id="@+id/main_fragment_to_detail_fragment"
+            app:destination="@id/detail_fragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="com.egabruskiy.githubsearcher.ui.detailRepoFragment.DetailRepoFragment"
+        android:label="detail_fragment">
+        <argument
+            android:name="model"
+            app:argType="com.egabruskiy.githubsearcher.data.model.GitRepoModel" />
+    </fragment>
+</navigation>

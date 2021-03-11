@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GitHubSearcher</string>
+<!--    <string name="app_name">Gi</string>-->
+    <string name="search">search</string>
+    <string name="saved">saved</string>
+    <string name="search_hint">search...</string>
+    <string name="save_repo">Сохранить репозиторий</string>
+    <string name="delete_repo">Удалить репозиторий</string>
+
+    <!-- Strings related to login -->
+</resources>
